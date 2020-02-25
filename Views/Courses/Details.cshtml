@@ -1,0 +1,42 @@
+﻿@model whetstone_MIS4200_MVC_P1.Models.Course
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Course</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Instructor.instructorsFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Instructor.instructorsFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.courseDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.courseDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.courseTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.courseTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CourseID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

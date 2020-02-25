@@ -1,0 +1,64 @@
+﻿@model whetstone_MIS4200_MVC_P1.Models.Instructor
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Instructor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.instructorsFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.instructorsFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.instructorsLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.instructorsLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.instructorsEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.instructorsEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.instructorsPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.instructorsPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.schoolIDc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.schoolIDc)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
