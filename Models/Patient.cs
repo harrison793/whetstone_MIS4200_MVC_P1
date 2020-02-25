@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 using System.Linq;
 using System.Web;
 
@@ -7,7 +9,11 @@ namespace whetstone_MIS4200_MVC_P1.Models
 {
     public class Patient
     {
+        public System.Guid PID { get; set; }
         public int patientID { get; set; }
+        [Display (Name="First Name")]
+        [Required(ErrorMessage  = "Patients first name is required")]
+        [StringLength(20)]
         public string firstName { get; set; }
         public string lastName { get; set; }
         public string email { get; set; }
