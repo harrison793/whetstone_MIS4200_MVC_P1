@@ -21,6 +21,7 @@ namespace whetstone_MIS4200_MVC_P1.DAL1
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Procedure> Procedures  { get; set; }
         public DbSet<appointmentDetail> appointmentDetails { get; set; }
+        public object AppointmentDetails { get; internal set; }
         public DbSet<Appointment> appointments { get; set; }
     }
 }
